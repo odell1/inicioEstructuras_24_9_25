@@ -29,5 +29,6 @@ public class Persona {
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
                 '}';
-    }
-}
+    }//toString
+    
+}//Persona
