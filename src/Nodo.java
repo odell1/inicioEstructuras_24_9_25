@@ -10,19 +10,22 @@ public class Nodo<T> {
     }//Constructor
 
     //Getters y Setters
-    public T getDato() {
-        return dato;
-    }
+
     public void setDato(T dato) {
         this.dato = dato;
     }   
-    public Nodo<T> getSiguiente() {
-        return siguiente;
-    }
-    //Ojo se coge el siguiente
+    
     public void setSiguiente(Nodo<T> siguiente) {
         this.siguiente = siguiente;
     }
+    
+    public Nodo<T> getSiguiente() {
+        return siguiente;
+    }
+        public T getDato() {
+        return dato;
+    }
+
 
 
 }//Nodo
