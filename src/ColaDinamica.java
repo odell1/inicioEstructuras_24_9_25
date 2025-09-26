@@ -49,9 +49,9 @@ public class ColaDinamica<T> {
         if( esVacia()) return null;
          
         T elemento= frente.getDato(); //Guardamos el dato del frente
-         frente=frente.getSiguiente(); //El frente ahora es el siguiente del frente
+        frente=frente.getSiguiente(); //El frente ahora es el siguiente del frente
 
-        if(frente==null) //Si el frente es null, la cola está vacía
+        if (frente==null) //Si el frente es null, la cola está vacía
             fin=null; //El fin también es null  
 
         tamanio--; //Disminuimos el tamaño de la cola
@@ -59,6 +59,15 @@ public class ColaDinamica<T> {
         return elemento; //Devolvemos el elemento desencolado
     }//desencolar
 
-    
+    //vaciar
+    public void vaciar() {
+
+        while (!esVacia()) {
+            desencolar();
+        }//while
+        System.out.println("Cola vaciada completamente");
+    }//vaciar
+
+
 
 }//ColaDinamica

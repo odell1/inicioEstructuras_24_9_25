@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class App {
     public static void main(String[] args) throws Exception {
        
@@ -21,6 +23,23 @@ public class App {
         colaEnteros.desencolar();
         
         System.out.println("nos quedan elementos... " + colaEnteros.getTamanio());
+        //Vaciamos la cola
+        colaEnteros.vaciar();
+
+        //Para strings
+
+        //Para la cola personas
+
+        //Buscar un elemento
+
+////////////////////////////////////////////////////////////
+/// Ordenación
+////////////////////////////////////////////////////////////
+        // Método burbuja
+        int[] array = Ordenacion.generarArrayAleatorio(10);
+        //Pasamos a la ordenación  
+        Ordenacion ordenacion = new Ordenacion();
+        ordenacion.Burubuja(array, true);
 
     }//main
 }//App
