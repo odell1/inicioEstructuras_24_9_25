@@ -78,6 +78,7 @@ FIN
                     array[j + 1] = temp;
                     intercambio = true;
                     
+
                     if (mostrarPasos) {
                         System.out.println("  ¡Intercambiamos! " + Arrays.toString(array));
                     }
@@ -100,6 +101,7 @@ FIN
             
         }//for
         return array;
+        
     }//Burubuja
 
 
