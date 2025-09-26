@@ -36,10 +36,31 @@ public class App {
 /// Ordenación
 ////////////////////////////////////////////////////////////
         // Método burbuja
+        //Array aleatorio
         int[] array = Ordenacion.generarArrayAleatorio(10);
         //Pasamos a la ordenación  
         Ordenacion ordenacion = new Ordenacion();
         ordenacion.Burubuja(array, true);
+
+        //Con colas
+        //Vacío la cola
+        colaEnteros.vaciar();
+        //Encolamos númmeros aleatorios
+        Random random = new Random();
+        
+        for (int i = 0; i < 10; i++) {
+             colaEnteros.encolar(random.nextInt(100));// 0  al 99
+          
+        }//for
+
+        colaEnteros.imprimirCola();
+        colaEnteros.ordenarBurbuja();
+        colaEnteros.imprimirCola();
+
+        
+
+
+
 
     }//main
 }//App

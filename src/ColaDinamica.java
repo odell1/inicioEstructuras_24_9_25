@@ -69,5 +69,58 @@ public class ColaDinamica<T> {
     }//vaciar
 
 
+    /////////
+public void imprimirCola() {
+    if (esVacia()) {
+        System.out.println("La cola está vacía.");
+        return;
+    }
+
+    Nodo<T> actual = frente;
+    System.out.print("Imprimiendo que es gerundio");
+    while (actual != null) {
+        System.out.print(actual.getDato());
+        actual = actual.getSiguiente();
+        if (actual != null) System.out.print(", ");
+    }
+    System.out.println(" ");
+}
+
+////////////////////////////////////////
+/// Ordenación por burbuja
+///////////////////////////////////////
+
+public void ordenarBurbuja() {
+    boolean intercambio;
+    Nodo<T> actual;
+
+    for (int i = 0; i < tamanio - 1; i++) {//for 1
+        intercambio = false;
+        actual = frente;
+
+        for (int j = 0; j < tamanio - 1 - i; j++) {//for 2
+            Nodo<T> siguiente = actual.getSiguiente();//Cogemos al siguiente
+
+            //Comparar
+            if ((int)actual.getDato()>(int)siguiente.getDato()) {
+                //Intercambiar los datos
+                T temp = actual.getDato();
+                actual.setDato(siguiente.getDato());
+                siguiente.setDato(temp);
+                intercambio = true;
+            }//if
+
+            //pasar al siguiente
+            actual = siguiente;
+        }//for 2
+
+        if (!intercambio) break; // Optimización
+
+         System.out.println("Cola ordenada por burbuja.");
+    }//for 1
+
+}//ordenarBurbuja
+
+
 
 }//ColaDinamica

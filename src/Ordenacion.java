@@ -57,7 +57,7 @@ FIN
         
         // Realizar n-1 pasadas
         for (int i = 0; i < n - 1; i++) {
-            intercambio = false;
+            intercambio = false;//Optimización
             pasada++;
             
             if (mostrarPasos) {
@@ -101,6 +101,7 @@ FIN
         }//for
         return array;
     }//Burubuja
+
 
 
 
