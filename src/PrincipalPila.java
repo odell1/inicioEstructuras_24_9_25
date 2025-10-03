@@ -40,7 +40,7 @@ public class PrincipalPila {
         for (int i = 0; i < texto.length(); i++) {
             char desdePila = pila.pop();
             if (texto.charAt(i) != desdePila) {
-                System.out.println("No es palíndromo");
+                System.out.println("No es palíndromo"); return;
             }//if
         }//for
 
